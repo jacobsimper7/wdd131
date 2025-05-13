@@ -39,11 +39,12 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* 3/4 and 1/4 layout */
-    gap: 20px; /* Space between cards */
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
     padding: 20px;
-    max-width: 1200px; /* Limit the width of the main section */
-    margin: 0 auto; /* Center the main section */
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-auto-rows: minmax(100px, auto); /* Minimum height of 100px */
 }
 
 .card {
@@ -52,6 +53,8 @@ main {
     border-radius: 10px; /* Rounded corners */
     background-color: white; /* Add a background color for contrast */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    /* max-height: 400px;
+    overflow: auto; */
 }
 
 .card h1 {
@@ -63,14 +66,16 @@ main {
 }
 
 .card img {
-    width: 100%; /* Ensure images are responsive */
-    height: auto;
-    border-radius: 10px; /* Match the card's rounded corners */
+    width: 25%;
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensure the image fits within the set height */
+    border-radius: 10px;
 }
 
 .card p {
     margin: 10px 0; /* Add spacing between paragraphs */
     text-align: justify; /* Align text for better readability */
+    padding: 10px; /* Add padding for better spacing */
 }
 
 .card a {
@@ -96,4 +101,11 @@ main {
     position: relative; /* Position relative for footer */
     bottom: 0; /* Stick to the bottom */
     width: 100%; /* Full width */
+ }
+
+ .innercard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
  }
