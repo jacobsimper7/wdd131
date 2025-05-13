@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #090446;
+    --secondary-color: #039f9f;
+    --accent1-color: rgb(42, 129, 199);
+    --accent2-color: #ABD2FA;
+    --heading-font: 'limelight', serif;
+    --text-font: 'roboto', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--text-font);
+    background-color: var(--accent2-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    flex: 1 0 auto;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3/4 and 1/4 layout */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    max-width: 1200px; /* Limit the width of the main section */
+    margin: 0 auto; /* Center the main section */
+}
+
+.card {
+    border: var(--secondary-color) 2px solid; /* Consistent border */
+    padding: 20px; /* Consistent padding */
+    border-radius: 10px; /* Rounded corners */
+    background-color: white; /* Add a background color for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.card h1 {
+    text-align: center; /* Center the card title */
+    background-color: var(--secondary-color); /* Background for the title */
+    color: var(--primary-color); /* Title text color */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+    border-radius: 10px; /* Match the card's rounded corners */
+}
+
+.card p {
+    margin: 10px 0; /* Add spacing between paragraphs */
+    text-align: justify; /* Align text for better readability */
+}
+
+.card a {
+    display: block; /* Make the link a block element */
+    text-align: center; /* Center the link text */
+    background-color: var(--secondary-color); /* Background color for the link */
+    color: var(--primary-color); /* Link text color */
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    border: var(--primary-color) 2px solid; /* Border for the link */
+    margin-top: 10px; /* Space above the link */
+}
+.card a:hover {
+    background-color: var(--primary-color); /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+ footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+ }
