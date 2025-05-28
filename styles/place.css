@@ -1,0 +1,213 @@
+:root {
+    --primary-color: rgb(208, 10, 10);
+    --secondary-color:navy;
+    --accent1-color: rgb(53, 164, 255);
+    --accent2-color: #ffffff;
+    --heading-font: 'limelight', serif;
+    --text-font: 'roboto', sans-serif;
+    --border-radius: 10px
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+body{
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f0f0f0; */
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;     
+    border-radius: var(--border-radius);  
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: var(--accent2-color); */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 10px solid var(--secondary-color);
+    position: relative;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+    /* border: 10px solid var(--secondary-color); */
+    border-radius: var(--border-radius);
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 600px; /* or your preferred height */
+}
+
+.hero-section .hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Large screens (default) */
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    z-index: 2;
+    text-align: center;
+    padding: 10px;
+}
+
+.weather, .data {
+    display: inline-block;
+    background: rgba(0, 0, 50, 0.3); /* semi-transparent navy, adjust as needed */
+    border: 2px solid rgba(255,255,255,0.3); /* semi-transparent white border */
+    border-radius: var(--border-radius);
+    padding: 1em 1.5em;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+.data {
+    display: inline-block;
+    align-self: start;      /* Align to top */
+    justify-self: start;    /* Align to left */
+    grid-column: 1;
+    grid-row: 1;
+    background: rgba(0, 0, 50, 0.3);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: var(--border-radius);
+    padding: 1em 1.5em;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+.weather {
+    display: inline-block;
+    align-self: end;        /* Align to bottom */
+    justify-self: end;      /* Align to right */
+    grid-column: 2;
+    grid-row: 2;
+    background: rgba(0, 0, 50, 0.3);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: var(--border-radius);
+    padding: 1em 1.5em;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+.weather img {
+    width: 48px;    /* or any size you prefer */
+    height: auto;   /* keeps aspect ratio */
+    display: block;
+    margin: 0 auto; /* centers the image */
+}
+.weather ul, .data ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* New styles for weather icon */
+.weather h2::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+    margin-left: 0.5em;
+    background: url('data:image/svg+xml;utf8,<svg fill="orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><g stroke="orange" stroke-width="2"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g></svg>') no-repeat center/contain;
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* On small screens, stack the icon below the heading */
+@media (max-width: 700px) {
+    .weather h2::after {
+        display: block;
+        margin: 0.5em auto 0 auto;
+        width: 2em;
+        height: 2em;
+    }
+    .hero-section {
+        height: auto; /* Let section grow with content */
+    }
+    .hero-section .hero {
+        height: auto;
+    }
+    .overlay-content {
+        position: static;
+        display: block;
+        background: none;
+        color: inherit;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .overlay-content > div {
+        background: none;
+        color: inherit;
+        margin: 1rem 0;
+        border-radius: 0;
+        text-align: center;
+        padding: 6px;
+    }
+    h2 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+    }
+    .weather, .data {
+        width: 100%; /* Full width on small screens */
+        margin: 0 auto; /* Center the content */
+        padding: 1em;
+        box-sizing: border-box;
+    }
+    .weather img {
+    width: 48px;    /* or any size you prefer */
+    height: auto;   /* keeps aspect ratio */
+    display: block;
+    margin: 0 auto; /* centers the image */
+}
+}

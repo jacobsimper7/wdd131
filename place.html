@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="A fun page to show things about the United States of America.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the USA!</h1>
+    </header>
+    <main>
+        <section class="hero-section">
+            <picture class="hero">
+                <source media="(min-width: 650px)" srcset="images/usa-map.webp">
+                <source media="(min-width: 465px)" srcset="images/usa-map.webp">
+                <img src="images/american-flag.webp" alt="USA map">
+            </picture>
+            <div class="overlay-content">
+                <div class="data">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><span class="label">Population:</span> 331 million</li>
+                        <li><span class="label">Area:</span> 9.8 million km²</li>
+                        <li><span class="label">Capital:</span> Washington, D.C.</li>
+                        <li><span class="label">Currency:</span> US Dollar (USD)</li>
+                        <li><span class="label">Official Language:</span> English</li>
+                        <li><span class="label">Time Zones:</span> UTC-5 to UTC-10</li>
+                        <li><span class="label">Calling Code:</span> +1</li>
+                        <li><span class="label">Driving Side:</span> Right</li>
+                        <li><span class="label">Internet TLD:</span> .us</li>
+                    </ul>
+                </div>
+                <div class="weather">
+                    <h2>Weather</h2>
+                    <ul>
+                        <li><span class="label">Temperature:</span> 49°F (9.4°C)</li>
+                        <li><span class="label">Conditions:</span> Partly Cloudy</li>
+                        <li><span class="label">Wind:</span> 11mph</li>
+                        <li><span class="label">Wind Chill:</span> <span id="windChill"></span> </li>
+                    </ul>
+                </div>
+            </div>
+    </main>
+     <footer>
+            <p>
+                <span id="currentyear"></span>
+                🌴 Jacob Simper 🌴 Idaho, US
+            </p>
+            <p id="lastModified"></p>
+        </footer>
+</body>
+
+</html>
