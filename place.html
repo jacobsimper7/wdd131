@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Country Page | WDD 131</title>
     <meta name="description" content="A fun page to show things about the United States of America.">
+    <meta name="author" content="Jacob Simper">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -18,7 +23,6 @@
         <section class="hero-section">
             <picture class="hero">
                 <source media="(min-width: 650px)" srcset="images/usa-map.webp">
-                <source media="(min-width: 465px)" srcset="images/usa-map.webp">
                 <img src="images/american-flag.webp" alt="USA map">
             </picture>
             <div class="overlay-content">
@@ -37,7 +41,8 @@
                     </ul>
                 </div>
                 <div class="weather">
-                    <h2>Weather</h2>
+                    <h2>Weather <span class="weather-emoji" aria-hidden="true">🌤️</span><img src="images/weather-icon.svg"
+                            alt="Weather Icon" class="weather-svg" /></h2>
                     <ul>
                         <li><span class="label">Temperature:</span> 49°F (9.4°C)</li>
                         <li><span class="label">Conditions:</span> Partly Cloudy</li>
@@ -46,14 +51,15 @@
                     </ul>
                 </div>
             </div>
+        </section>
     </main>
-     <footer>
-            <p>
-                <span id="currentyear"></span>
-                🌴 Jacob Simper 🌴 Idaho, US
-            </p>
-            <p id="lastModified"></p>
-        </footer>
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            🌴 Jacob Simper 🌴 Idaho, US
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
