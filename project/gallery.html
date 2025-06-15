@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DPrintBros.org</title>
+    <meta name="description"
+        content="Explore our site where we offer a wide range of 3D printing services and products.">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/gallery.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">Creative 3D</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="cta">Start Printing</button>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h1>Discover Stunning 3D Prints</h1>
+        <p>Explore our latest designs and creations!</p>
+
+        <div class="gallery-filters">
+            <button type="button" data-filter="all" class="active">All</button>
+            <button type="button" data-filter="fidget">Fidgets</button>
+            <button type="button" data-filter="temple">Temples</button>
+            <!-- Add more buttons as needed -->
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <!-- <div class="gallery-grid"> 😭😭😭😭😭😭😭😭
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:6563222" target="_blank">
+                    <img src="images/fidget-sword.webp" alt="Fidget Sword" loading="lazy">
+                    <div class="overlay">
+                        <p>3D Printed Fidget Sword</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:4997903" target="_blank">
+                    <img src="images/infinity-cube.webp" alt="3D Printed Infinity Cube" loading="lazy">>
+                    <div class="overlay">
+                        <p>Infinity Cube</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:4804260" target="_blank">
+                    <img src="images/quad-star-fidget.webp" alt="3D Printed Quad Star Fidget Toy" loading="lazy">">
+                    <div class="overlay">
+                        <p>3D Printed Quad Star Fidget Toy</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:1794875" target="_blank">
+                    <img src="images/fidget-spinner.webp" alt="3D Printed Fidget Spinner" loading="lazy">">
+                    <div class="overlay">
+                        <p>3D Printed Fidget Spinner</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:7058952" target="_blank">
+                    <img src="images/articulated-snake.webp" alt="3D Printed Articulated Snake" loading="lazy">">
+                    <div class="overlay">
+                        <p>Articulated Snake</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:2014525" target="_blank">
+                    <img src="images/temple-napkin-holder.webp" alt="SLC Temple napkin holder" loading="lazy">">
+                    <div class="overlay">
+                        <p>SLC Temple Napkin Holder</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:3234616" target="_blank">
+                    <img src="images/golden-plates-tissue-box.webp" alt="3D Printed Golden Plates Tissue Box"
+                        loading="lazy">">
+                    <div class="overlay">
+                        <p>Golden Plates Tissue Box</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:5937224" target="_blank">
+                    <img src="images/tie-clips.webp" alt="Tie Clips for Church" loading="lazy">">
+                    <div class="overlay">
+                        <p>Tie Clips for Church</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.thingiverse.com/thing:729743" target="_blank">
+                    <img src="images/salt-lake-temple.webp" alt="3D Printed Salt Lake Temple" loading="lazy">">
+                    <div class="overlay">
+                        <p>3D Printed Salt Lake Temple</p>
+                    </div>
+                </a>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="image-credit">
+            "Links Master Sword - Pocket Fidget Sword" image by <a href="https://www.thingiverse.com/3DDotDragon"
+                target="_blank" rel="noopener">3DDotDragon
+            </a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "Infinity Fidget Cube" image by <a href="https://www.thingiverse.com/mjdargen" target="_blank"
+                rel="noopener">
+                mjdargen</a> is licensed under the Creative Commons - Attribution license
+        </p>
+        <p class="image-credit">
+            "Quad Star | Fidget Toy" image by <a href="https://www.thingiverse.com/HexNuts" target="_blank"
+                rel="noopener">
+                HexNuts</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "Ball Bearing Spinner Fidget Toy" image by <a href="https://www.thingiverse.com/Keshyden" target="_blank"
+                rel="noopener">
+                Keshyden</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "Articulated snake" image by <a href="https://www.thingiverse.com/Print_that_thing" target="_blank"
+                rel="noopener">
+                Print_that_thing</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "SLC Temple napkin holder" image by <a href="https://www.thingiverse.com/fffrune" target="_blank"
+                rel="noopener">
+                fffrune</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "Golden Plates Tissue Box" image by <a href="https://www.thingiverse.com/Gregawal" target="_blank"
+                rel="noopener">
+                Gregawal</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "Tie Clips for Church" image by <a href="https://www.thingiverse.com/McFuddy" target="_blank"
+                rel="noopener">
+                McFuddy</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p class="image-credit">
+            "Salt Lake Temple" image by <a href="https://www.thingiverse.com/barrand" target="_blank" rel="noopener">
+                barrand</a> is licensed under the Creative Commons - Attribution license.
+        </p>
+        <p>
+            <span id="currentyear"></span>
+            🐐 Jacob Simper 🐐 Idaho, US 🐐
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>

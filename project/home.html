@@ -7,12 +7,13 @@
     <title>3DPrintBros.org</title>
     <meta name="description"
         content="Explore our site where we offer a wide range of 3D printing services and products.">
-    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/project.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <script src="scripts/project-home.js" defer></script>
 </head>
 <!-- Senarios: 
  What kinds of things can I print?
@@ -20,16 +21,16 @@
   What materials can be used?
   How long will it take?
   What is the size limit?-->
+
 <body>
-    <!-- Navigation will have home gallery services and contact page links with the logo on the left and a print now button on the right-->
     <header>
         <div class="logo">Creative 3D</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <button class="cta">Start Printing</button>
@@ -39,23 +40,23 @@
     <section class="hero">
         <h1>Unleash Your Creativity in <span>3D Printing</span>!</h1>
         <p>Bring your ideas to life with precision and color.</p>
-        <button class="cta">Explore Designs</button>
+        <button id="exploreBtn" class="cta">Explore Designs</button>
     </section>
 
     <!-- Showcase Section -->
     <section class="showcase">
         <div class="service">
-            <img src="rapid-prototyping.jpg" alt="Rapid Prototyping">
+            <img src="images/rapid-prototypyng-car.webp" alt="Rapid Prototyping">
             <h2>Rapid Prototyping</h2>
             <p>Print functional prototypes with speed and accuracy.</p>
         </div>
         <div class="service">
-            <img src="custom-creations.jpg" alt="Custom Creations">
+            <img src="images/lithophane-box.webp" alt="Custom Creations">
             <h2>Custom Creations</h2>
             <p>Turn your unique vision into reality with 3D printing.</p>
         </div>
         <div class="service">
-            <img src="filaments.jpg" alt="Filament Choices">
+            <img src="images/filament-pic.webp" alt="Filament Choices">
             <h2>Filament Choices</h2>
             <p>Choose vibrant colors and advanced materials.</p>
         </div>
@@ -63,12 +64,12 @@
 
     <!-- Footer -->
     <footer>
-        <!-- Wireframes: -->
-         <img src="images/large-wireframe.png" alt="">
-         <img src="images/mobile-wireframe.png" alt="">
-        <p>© 2025 Creative 3D Printing | Follow us on social media!</p>
+        <p>
+            <span id="currentyear"></span>
+            🐐 Jacob Simper 🐐 Idaho, US 🐐
+        </p>
+        <p id="lastModified"></p>
     </footer>
-
 </body>
 
 </html>
