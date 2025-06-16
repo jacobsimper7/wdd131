@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,180 @@
     <meta name="description"
         content="Explore our site where we offer a wide range of 3D printing services and products.">
     <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <script src="scripts/project-home.js" defer></script>
+    <script src="scripts/services.js" defer></script>
 </head>
+
 <body>
 
-    <!-- Navigation -->
+    <!------------------------------ Navigation ------------------------------->
     <header>
         <div class="logo">Creative 3D</div>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button class="cta">Get a Quote</button>
+        <a href="home.html#quote-form" class="cta">Get a Quote</a>
     </header>
+    <main>
+        <!------------------------------------------Services Section --------------------------->
+        <section class="services">
+            <h1>Our 3D Printing Services</h1>
+            <p>From rapid prototyping to custom creations, we bring your ideas to life!</p>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h1>Our 3D Printing Services</h1>
-        <p>From rapid prototyping to custom creations, we bring your ideas to life!</p>
-        
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="rapid-prototyping.jpg" alt="Rapid Prototyping">
-                <h2>Rapid Prototyping</h2>
-                <p>Quickly turn your concepts into tangible prototypes.</p>
+            <div class="services-grid">
+                <a href="#order-form">
+                    <div class="service-item">
+                        <img src="images/lithophane-christmas-ornaments.jpg" alt="Custom Designs">
+                        <h2>Custom Designs</h2>
+                        <p>Personalized 3D prints tailored to your vision.</p>
+                    </div>
+                </a>
+                <a href="https://www.onshape.com/en/lp/onshape-cam?utm_source=bing&utm_medium=cpc&utm_campaign=Bing_Search_NA&utm_term=hsm+works+solidworks&utm_content=Bing_NA_CAM&mostrecentleadsource=bing-cpc--20512&msclkid=10cd1e7afe7315e781d0762ab2e114c0">
+                    <div class="service-item">
+                        <img src="images/cup-handle-onshape.webp" alt="Rapid Prototyping">
+                        <h2>Rapid Prototyping</h2>
+                        <p>Quickly turn your concepts into tangible prototypes.</p>
+                    </div>
+                </a>
+                <a
+                    href="https://www.amazon.com/s?k=filament&i=industrial&crid=2XF3CA4PIPGE2&sprefix=filament%2Cindustrial%2C190&ref=nb_sb_noss_1">
+                    <div class="service-item">
+                        <img src="images/filament-pic.webp" alt="Filament Options">
+                        <h2>Filament & Materials</h2>
+                        <p>Choose from a wide range of materials and vibrant colors.</p>
+                    </div>
+                </a>
+                <a href="gallery.html">
+                    <div class="service-item">
+                        <img src="images/temple-napkin-holder.webp" alt="Decorative to Useful">
+                        <h2>From Decorative to Useful</h2>
+                        <p>High-quality prints for industrial and creative projects.</p>
+                    </div>
+                </a>
             </div>
-            <div class="service-item">
-                <img src="custom-designs.jpg" alt="Custom Designs">
-                <h2>Custom Designs</h2>
-                <p>Personalized 3D prints tailored to your vision.</p>
-            </div>
-            <div class="service-item">
-                <img src="filament-options.jpg" alt="Filament Options">
-                <h2>Filament & Materials</h2>
-                <p>Choose from a wide range of materials and vibrant colors.</p>
-            </div>
-            <div class="service-item">
-                <img src="large-scale-printing.jpg" alt="Large-Scale Printing">
-                <h2>Large-Scale Printing</h2>
-                <p>High-quality prints for industrial and creative projects.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+
+        <!--------------------------------------------Order Form Section --------------------------->
+
+        <section class="order-section" id="order-form">
+            <h1>Request a Custom Creation</h1>
+            <p>Fill out the form below to start your custom 3D printing project. We’ll get back to you with a quote and
+                details!</p>
+            <form class="order-form">
+                <fieldset>
+                    <label for="orderName">Your Name*</label>
+                    <input type="text" id="orderName" name="orderName" required>
+
+                    <label for="orderEmail">Email Address*</label>
+                    <input type="email" id="orderEmail" name="orderEmail" required>
+
+                    <label for="orderPhone">Phone Number</label>
+                    <input type="tel" id="orderPhone" name="orderPhone" placeholder="Optional">
+
+                    <label for="orderDescription">Describe Your Project*</label>
+                    <textarea id="orderDescription" name="orderDescription" rows="4" required></textarea>
+
+                    <label for="orderMaterial">Preferred Material</label>
+                    <select id="orderMaterial" name="orderMaterial">
+                        <option value="">Select Material</option>
+                        <option value="pla">PLA</option>
+                        <option value="abs">ABS</option>
+                        <option value="petg">PETG</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="orderColor">Preferred Color</label>
+                    <input type="text" id="orderColor" name="orderColor" placeholder="e.g. Red, Blue, Black">
+
+                    <label for="orderFile">Upload Design File (STL, OBJ, etc.)</label>
+                    <input type="file" id="orderFile" name="orderFile" accept=".stl,.obj,.zip,.rar">
+
+                    <label for="orderDeadline">Desired Completion Date</label>
+                    <input type="date" id="orderDeadline" name="orderDeadline">
+
+                    <button type="submit">Submit Order Request</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="services-main">
+            <!-- -------------------------------Testimonials Section--------------------------------- -->
+
+            <section class="testimonials">
+                <h1>What Our Clients Say</h1>
+                <div class="testimonial-item">
+                    <p>"Creative 3D transformed my idea into a stunning prototype. Highly recommend!"</p>
+                    <span>- Aaron G.</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Their custom designs exceeded my expectations. Will definitely use their services again."</p>
+                    <span>- Adam O.</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Fast, reliable, and high-quality prints. Creative 3D is my go-to for all my 3D printing needs."
+                    </p>
+                    <span>- Isaac S.</span>
+                </div>
+            </section>
+
+            <!-- ------------------------------------Review Section---------------------------------- -->
+            <section class="review-section">
+                <h1>Post a Review</h1>
+                <p>Share your experience with our products and services!</p>
+                <form method="get" action="review.html" class="form">
+                    <fieldset>
+                        <label>Product Name*
+                            <select name="product" required>
+                                
+                            </select>
+                        </label>
+
+                        <label>Overall Rating*</label>
+                        <div class="stars">
+                            <input type="radio" id="fivestar" name="stars" value="5" required><label
+                                for="fivestar"></label>
+                            <input type="radio" id="fourstar" name="stars" value="4" required><label
+                                for="fourstar"></label>
+                            <input type="radio" id="threestar" name="stars" value="3" required><label
+                                for="threestar"></label>
+                            <input type="radio" id="twostar" name="stars" value="2" required><label
+                                for="twostar"></label>
+                            <input type="radio" id="onestar" name="stars" value="1" required><label
+                                for="onestar"></label>
+                        </div>
+
+                        <label>Date of Installation*<input type="date" id="installationDate" name="installationDate"
+                                required></label>
+
+                        <div><label>Which features did you find useful in the product? (check all that apply)</label>
+                        </div>
+                        <label><input type="checkbox" name="design" id="design" value="yes">Design</label>
+                        <label><input type="checkbox" name="durability" id="durability" value="yes">Durability</label>
+                        <label><input type="checkbox" name="easyUse" id="easyUse" value="yes">Easy to Use</label>
+                        <label><input type="checkbox" name="performance" id="performance"
+                                value="yes">Performance</label>
+
+                        <label>Written Review (optional)<textarea name="review" id="review"></textarea></label>
+
+                        <label>Your Name (optional)<input type="text" name="userName" id="userName"></label>
+                    </fieldset>
+
+                    <input type="submit" value="Post Review">
+                </form>
+            </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -69,4 +193,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -1,5 +1,110 @@
 @media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .gallery {
+        padding: 20px 5px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .showcase,
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .service,
+    .service-item {
+        padding: 10px;
+    }
+
+    .form,
+    .review-form {
+        padding: 1rem;
+        max-width: 98vw;
+    }
+
+    .form fieldset,
+    .review-form fieldset {
+        padding: 1rem;
+    }
+
+    .services-main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .testimonials,
+    .review-section {
+        max-width: 100%;
+    }
+
+
+    .order-form {
+        padding: 1rem;
+        max-width: 98vw;
+    }
+
+    .order-form fieldset {
+        padding: 1rem;
+    }
+
+    .form input[type="text"],
+    .form input[type="date"],
+    .form textarea,
+    .form select,
+    .review-form input[type="text"],
+    .review-form input[type="date"],
+    .review-form textarea,
+    .review-form select,
+    .order-form input[type="text"],
+    .order-form input[type="email"],
+    .order-form input[type="tel"],
+    .order-form input[type="date"],
+    .order-form textarea,
+    .order-form select,
+    .order-form input[type="file"] {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+footer {
+    padding: 10px;
+    font-size: 0.9em;
 }

@@ -8,6 +8,8 @@
     <meta name="description"
         content="Explore our site where we offer a wide range of 3D printing services and products.">
     <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,13 +29,13 @@
         <div class="logo">Creative 3D</div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button class="cta">Start Printing</button>
+        <a href="services.html" class="cta">Start Printing</a>
     </header>
 
     <!-- Hero Section -->
@@ -45,21 +47,86 @@
 
     <!-- Showcase Section -->
     <section class="showcase">
-        <div class="service">
-            <img src="images/rapid-prototypyng-car.webp" alt="Rapid Prototyping">
-            <h2>Rapid Prototyping</h2>
-            <p>Print functional prototypes with speed and accuracy.</p>
-        </div>
-        <div class="service">
-            <img src="images/lithophane-box.webp" alt="Custom Creations">
-            <h2>Custom Creations</h2>
-            <p>Turn your unique vision into reality with 3D printing.</p>
-        </div>
-        <div class="service">
-            <img src="images/filament-pic.webp" alt="Filament Choices">
-            <h2>Filament Choices</h2>
-            <p>Choose vibrant colors and advanced materials.</p>
-        </div>
+        <a href="services.html">
+            <div class="service">
+                <img src="images/rapid-prototypyng-car.webp" alt="Rapid Prototyping">
+                <h2>Rapid Prototyping</h2>
+                <p>Print functional prototypes with speed and accuracy.</p>
+            </div>
+        </a>
+        <a href="gallery.html">
+            <div class="service">
+                <img src="images/lithophane-box.webp" alt="Custom Creations">
+                <h2>Custom Creations</h2>
+                <p>Turn your unique vision into reality with 3D printing.</p>
+            </div>
+        </a>
+        <a
+            href="https://www.amazon.com/s?k=filament&i=industrial&crid=2XF3CA4PIPGE2&sprefix=filament%2Cindustrial%2C190&ref=nb_sb_noss_1">
+            <div class="service">
+                <img src="images/filament-pic.webp" alt="Filament Choices">
+                <h2>Filament Choices</h2>
+                <p>Choose vibrant colors and advanced materials.</p>
+            </div>
+        </a>
+    </section>
+
+<!---------------------------------------------------- Quote Section ------------------------------------------------>
+    <section class="quote-section" id="quote-form">
+        <h2>Get a Quick Quote</h2>
+        <form class="quote-form">
+            <fieldset>
+                <label for="userName">Your Name*</label>
+                <input type="text" id="userName" name="userName" required>
+
+                <label for="userEmail">Your Email*</label>
+                <input type="email" id="userEmail" name="userEmail" required>
+
+                <label for="partName">Part Name*</label>
+                <input type="text" id="partName" name="partName" required>
+
+                <label for="quoteDate">Date*</label>
+                <input type="date" id="quoteDate" name="quoteDate" required>
+
+                <label for="materialUsed">Material Used*</label>
+                <select id="materialUsed" name="materialUsed" required>
+                    <option value="">Select Material</option>
+                </select>
+
+                <!-- These will show only if "Other" is selected -->
+                <div id="otherMaterialFields" style="display:none;">
+                    <label for="customMaterial">Custom Material Name*</label>
+                    <input type="text" id="customMaterial" name="customMaterial">
+
+                    <label for="otherCost">Cost per kg (USD)*</label>
+                    <input type="number" id="otherCost" name="otherCost" min="0" step="0.01">
+                </div>
+
+                <label for="otherCost" id="otherCostLabel" style="display:none;">Cost per kg (USD)*</label>
+                <input type="number" id="otherCost" name="otherCost" min="0" step="0.01" style="display:none;" required>
+
+                <label for="color">Color</label>
+                <select id="color" name="color" required>
+                </select>
+
+                <!-- These will show only if "Other" is selected -->
+                <div id="otherColorFields" style="display:none;">
+                    <label for="customColor">Custom Color Name*</label>
+                    <input type="text" id="customColor" name="customColor">
+                </div>
+                <label for="filamentAmount">Estimated Filament amount (grams)*</label>
+                <input type="number" id="filamentAmount" name="filamentAmount" min="1" required>
+
+                <label for="quoteFile">Upload a File (optional)</label>
+                <input type="file" id="quoteFile" name="quoteFile" accept=".stl,.obj,.zip,.rar,.jpg,.png,.pdf">
+
+                <button type="submit" class="cta">Get Quote</button>
+            </fieldset>
+            <p id="quote-message"
+                style="display:none; color: var(--primary-color); font-weight: bold; text-align: center; margin-top: 1rem;">
+                Thank you! We will email you with your quote in 24 hours.
+            </p>
+        </form>
     </section>
 
     <!-- Footer -->
